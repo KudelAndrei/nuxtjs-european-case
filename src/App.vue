@@ -1,21 +1,23 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue'
 
 export default {
   name: 'app',
+  head: {
+    title: "Софатекс - одежда для мебели"
+  },
   components: {
-    HelloWorld
+    Header
   }
 }
 </script>
 
 <style lang="sass">
-  @import '/assets/style.sass'
+  @import '/assets/styles/style.sass'
 </style>

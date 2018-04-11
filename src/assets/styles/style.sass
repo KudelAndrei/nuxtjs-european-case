@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:200,300,400,500,600,700,900&subset=cyrillic')
+
+*, *::before, *::after
+    box-sizing: border-box
+    outline: none
+
+body
+    min-width: 320px
+    background-color: #fff
+    font-size: 18px
+    font-family: Fira Sans, sans-serif
+    font-weight: 400
+    overflow-x: hidden
+    margin: 0
+
+a 
+    color: #333
+    text-decoration: none
+
+h1,h2,h3,h4,p
+    margin: 0
+
+ul,li 
+    list-style-type: none 
+    margin: 0
+    padding: 0   
+
+.container
+    max-width: 1230px
+    width: 100%
+    padding: 0 15px
+    margin: 0 auto
+
+.section
+    position: relative
+    padding: 30px 0 50px
+    .container
+        position: relative
+    .section-page
+        position: absolute
+        bottom: -70px
+        right: 20px
+        font-size: 48px
+        color: #b2b2b0
+        font-weight: 300
+
+.btn
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 30px
+    background-color: #d65988
+    height: 46px
+    border: none
+    color: #fff
+    font-weight: 300
+    letter-spacing: 1px
+    text-transform: uppercase
+    padding: 5px 30px
+    box-shadow: 0 3px 7px 0 rgba(#d65988, .35)
+    cursor: pointer
+    transition: 0.2s ease-in-out
+    &:hover
+        box-shadow: none
+
+.link
+    background-color: transparent
+    border: none
+    font-size: 16px
+    color: #d65988
+    text-decoration: underline
+    line-height: 1.2
+    padding: 6px 0 0 0
+    cursor: pointer
+    &:hover 
+        text-decoration: none
+
+
+@import './header'
