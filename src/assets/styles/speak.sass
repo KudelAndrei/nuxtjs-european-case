@@ -1,0 +1,56 @@
+.speak
+    z-index: 1
+    background-repeat: no-repeat
+    background-size: cover
+    &::before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        background-color: #fff
+        opacity: 0.8
+        z-index: -1
+    .section-title
+        margin-bottom: 30px
+        img 
+            height: 20px
+            bottom: 12px
+    .speak-desc
+        margin-bottom: 10%
+        margin-left: 50px
+        p 
+            margin-bottom: 20px
+    .speak-head
+        color: #d65988
+        font-size: 48px
+        margin-left: 50px
+        margin-bottom: 30px
+    .speak-wrap
+        display: flex
+        li
+            padding-left: 50px
+            position: relative
+            margin-right: 40px
+            margin-bottom: 30px
+            &::before
+                content: ""
+                position: absolute
+                top: 2px
+                left: 0
+                width: 16px
+                height: 16px
+                background-color: #d65988
+                border-radius: 50%
+
+@media screen and (max-width: 600px)
+    .speak 
+        .speak-desc, .speak-head
+            margin-left: 0
+        .speak-head
+            font-size: 40px
+        .speak-wrap
+            flex-direction: column
+        .speak-bottom
+            padding-bottom: 40px

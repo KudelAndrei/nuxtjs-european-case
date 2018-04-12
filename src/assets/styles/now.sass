@@ -1,0 +1,43 @@
+.now
+    background-repeat: no-repeat
+    background-size: cover
+    color: #fff
+    &::before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        width: 50%
+        min-width: 550px
+        height: 100%
+        background-color: #d65988
+        opacity: 0.9
+    .section-title
+        margin-bottom: 10%
+        img 
+            height: 20px
+            bottom: 18px
+    .now-wrap
+        display: flex 
+        flex-direction: column
+        li 
+            position: relative
+            margin-bottom: 10%
+            padding-left: 50px
+            &::before
+                position: absolute
+                content: ""
+                width: 18px
+                height: 18px
+                border-radius: 50%
+                background-color: #fff
+                left: 0
+                top: 6px
+            &:last-child
+                margin-bottom: 0
+
+@media screen and (max-width: 600px)
+    .now
+        &::before
+            width: 100%
+            min-width: auto

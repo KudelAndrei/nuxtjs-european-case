@@ -19,9 +19,6 @@
     z-index: 2
     background-repeat: no-repeat
     background-size: cover
-    height: 100vh
-    min-height: 800px
-    display: flex
     &::before 
         position: absolute
         content: ""
@@ -135,3 +132,30 @@
                 width: 100%
                 >span 
                     display: inline-block
+
+@media screen and (max-width: 600px)
+    .section
+        .section-page 
+            font-size: 30px
+            bottom: 15px
+    .header 
+        .header-top
+            flex-direction: column
+        .logo
+            line-height: 0.7
+            margin-top: 15px
+        .header-bottom
+            margin-bottom: 20px
+            
+
+@media screen and (max-width: 500px)
+    .section 
+        .container
+            padding: 20px 15px
+    .header 
+        .header-line
+            justify-content: center
+        .header-center
+            padding: 15px
+        .header-title
+            font-size: 34px

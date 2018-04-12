@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:200,300,400,500,600,700,900&subset=cyrillic')
 
+
 *, *::before, *::after
     box-sizing: border-box
     outline: none
@@ -28,21 +29,39 @@ ul,li
 .container
     max-width: 1230px
     width: 100%
-    padding: 0 15px
+    padding: 40px 15px 50px
     margin: 0 auto
 
 .section
     position: relative
-    padding: 30px 0 50px
+    min-height: 100vh
+    height: 100%
+    display: flex
     .container
         position: relative
+        margin: auto
     .section-page
         position: absolute
-        bottom: -70px
+        bottom: 0px
         right: 20px
         font-size: 48px
         color: #b2b2b0
         font-weight: 300
+    .section-title
+        font-size: 48px
+        position: relative
+        display: inline-block
+        padding-bottom: 30px
+        margin-left: 50px
+        line-height: 1.1
+        z-index: 1
+        img
+            position: absolute
+            bottom: 26px
+            left: 0
+            width: 100%
+            height: 12px
+            z-index: -1
 
 .btn
     display: flex
@@ -72,8 +91,19 @@ ul,li
     line-height: 1.2
     padding: 6px 0 0 0
     cursor: pointer
+    font-family: Myriad Pro Regular, sans-serif
     &:hover 
         text-decoration: none
 
+@media screen and (max-width: 600px)
+    .section
+        .section-title
+            font-size: 40px
+            margin-left: 0
 
 @import './header'
+@import './store'
+@import './now'
+@import './director'
+@import './speak'
+@import './profit'

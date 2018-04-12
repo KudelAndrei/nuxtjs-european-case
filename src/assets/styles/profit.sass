@@ -1,0 +1,48 @@
+.profit
+    background-color: #fff
+    .section-title
+        margin-bottom: 10%
+    .profit-wrap
+        display: flex
+        flex-direction: column
+        font-size: 14px
+    .profit-top, .profit-bottom
+        display: flex
+        justify-content: space-between
+        .profit-row
+            flex: 1 1 1
+            width: calc(50% - 15px)
+            margin-bottom: 36px
+            background-color: #f4f4f4
+            padding: 20px 30px
+            border-radius: 5px
+            &.profit-row--first
+                display: flex
+                .col:first-child
+                    position: relative
+                    padding-right: 50px
+                    &::before
+                        position: absolute
+                        content: ""
+                        top: 0
+                        right: 30px
+                        width: 1px
+                        height: 100%
+                        background-color: #333
+                        transform: rotate(20deg)
+            p 
+                padding-bottom: 10px
+            .accent
+                color: #d65988
+                font-size: 25px
+                padding-top: 6px
+                display: inline-block
+            .number
+                font-size: 25px
+                font-weight: 500
+        .col-first
+            display: flex
+            flex-direction: column
+    .profit-bottom
+        margin-bottom: 10%
+

@@ -1,0 +1,71 @@
+.director
+    background-color: #fff
+    .director-wrap
+        display: flex
+        align-items: flex-start
+        padding: 10px 50px
+        .director-img
+            max-width: 500px
+            width: 50%
+            flex: 1 1 50%
+            padding-right: 50px
+            img 
+                width: 100%
+                margin-bottom: 20px
+        .director-desc 
+            flex: 1 1 50%
+            width: 50%
+            position: relative
+            p 
+                margin-bottom: 20px
+            .director-signature
+                position: absolute
+                top: calc(100% - 30px)
+                right: 0
+        .director-quote
+            display: flex
+            justify-content: space-between
+            color: #d65988
+            >span 
+                font-size: 16px
+            a 
+                color: #d65988
+                display: flex
+                align-items: flex-end
+                i 
+                    margin-left: 3px
+                    width: 36px
+                    height: 36px
+                span 
+                    min-width: 80px
+
+@media screen and (max-width: 1100px)
+    .director 
+        .director-wrap
+            flex-direction: column
+            padding: 10px 0
+            .director-img, .director-desc
+                width: 100%
+                flex: 1 1 100%
+            .director-img
+                margin: 0 auto 20px
+                padding: 0
+            .director-desc
+                max-width: 800px
+                margin: 0 auto
+                padding-bottom: 40px
+                .director-signature
+                    top: calc(100% - 65px)
+
+@media screen and (max-width: 500px)
+    .director 
+        padding-bottom: 40px
+        .director-wrap 
+            .director-desc 
+                .director-signature
+                    width: 150px
+                    left: 0
+                    right: auto
+                    top: calc(100% - 35px)
+                    img
+                        width: 100%

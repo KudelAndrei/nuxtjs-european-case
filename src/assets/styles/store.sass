@@ -1,0 +1,65 @@
+.store
+    background-color: #fff
+    .store-desc
+        margin-bottom: 60px
+    .store-wrap
+        display: flex
+        justify-content: space-between
+        margin-bottom: 70px
+        >li 
+            flex: 1 1 33%
+            padding-right: 30px
+            font-size: 18px
+            h3 
+                margin-bottom: 10px
+    .store-bottom
+        display: flex
+        justify-content: space-between
+        margin-bottom: 60px
+        li 
+            position: relative
+            flex: 1 1 33%
+            display: flex
+            .store-icon
+                margin-right: 15px
+            h4 
+                font-weight: 400
+    .store-busness
+        position: absolute
+        top: 100%
+        left: 60px
+        display: flex
+        align-items: center
+        >img:first-child
+            margin-right: 15px
+
+@media screen and (max-width: 1000px)
+    .store
+        .store-wrap
+            flex-direction: column
+            margin-bottom: 30px
+            li
+                margin-bottom: 20px
+
+@media screen and (max-width: 700px)
+    .store
+        .store-bottom
+            flex-direction: column
+            margin-bottom: 30px
+            li 
+                margin-bottom: 20px
+                &:first-child
+                    margin-bottom: 70px
+        .store-wrap
+            li
+                padding-right: 0
+
+@media screen and (max-width: 500px)
+    .store
+        .store-busness
+            display: flex
+            flex-direction: column
+            top: 30px
+            left: 90px
+            img 
+                margin-bottom: 10px
