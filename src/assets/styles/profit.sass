@@ -6,6 +6,7 @@
         display: flex
         flex-direction: column
         font-size: 14px
+        margin-bottom: 10%
     .profit-top, .profit-bottom
         display: flex
         justify-content: space-between
@@ -30,6 +31,54 @@
                         height: 100%
                         background-color: #333
                         transform: rotate(20deg)
+            &.profit-row--second
+                display: flex
+                flex-direction: column
+                .col:last-child
+                    display: flex
+                    strong
+                        font-size: 25px
+                        font-weight: 500
+                    p:first-child
+                        position: relative
+                        margin-right: 50px
+                        &::before
+                            content: ""
+                            position: absolute
+                            top: 6px
+                            left: calc(100% + 10px)
+                            width: 30px
+                            height: 20px
+                            background-image: url(./assets/images/arrow.png)
+                            background-repeat: no-repeat
+            &.profit-row--third
+                display: flex
+                justify-content: space-between
+                .col
+                    flex: 1 1 30%
+                    display: flex
+                    flex-direction: column
+                    p:last-child
+                        margin-top: auto
+                        position: relative
+                        &::before
+                            content: ""
+                            position: absolute
+                            top: 6px
+                            left: 75%
+                            width: 30px
+                            height: 20px
+                            background-image: url(./assets/images/arrow.png)
+                            background-repeat: no-repeat
+                    strong
+                        font-weight: 500
+                    &:last-child
+                        p::before
+                            display: none
+                        .number
+                            color: #d65988
+            &.profit-row--fourth
+                display: flex
             p 
                 padding-bottom: 10px
             .accent
@@ -43,6 +92,75 @@
         .col-first
             display: flex
             flex-direction: column
-    .profit-bottom
+    .profit-btn
         margin-bottom: 10%
+        padding-left: 50px
+        display: flex
+        justify-content: flex-start
+        .btn
+            margin-right: 20px
+            padding: 0 50px
+        .btn-link
+            background-color: transparent
+            text-decoration: underline
+            border: none
+            padding-bottom: 3px
+            cursor: pointer
+            font-size: 14px
+            &:hover
+                text-decoration: none
 
+@media screen and (max-width: 1000px)
+    .profit 
+        .profit-wrap
+            .profit-top, .profit-bottom
+                flex-direction: column
+                .profit-row
+                    flex: 1 1 100%
+                    width: 100%
+                        
+@media screen and (max-width: 600px)
+    .profit 
+        .profit-wrap
+            .profit-top, .profit-bottom
+                .profit-row
+                    &.profit-row--first
+                        flex-direction: column
+                        .col
+                            padding-right: 0
+                            &:last-child
+                                display: flex
+                                align-items: flex-end
+                                p 
+                                    padding-bottom: 0
+                                    margin-right: 10px
+                            &::before
+                                display: none
+                    &.profit-row--third
+                        flex-direction: column
+                        .col
+                            margin-bottom: 10px
+
+
+@media screen and (max-width: 500px)
+    .profit 
+        .profit-wrap
+            .profit-top, .profit-bottom
+                .profit-row
+                    padding: 15px
+                    &.profit-row--fourth
+                        flex-direction: column
+                        .col
+                            &:first-child
+                                display: flex
+                                align-items: center
+                                margin-bottom: 10px
+                                p, strong
+                                    margin-right: 8px          
+                                p 
+                                    padding: 0
+        .profit-btn
+            padding-left: 0
+            .btn
+                padding: 0 30px
+                            

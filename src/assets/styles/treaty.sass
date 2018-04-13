@@ -1,0 +1,92 @@
+.treaty
+    background-repeat: no-repeat
+    background-size: cover
+    &::before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background-color: #fff
+        opacity: 0.9
+    .section-title
+        margin-bottom: 10%
+    .treaty-desc
+        padding-left: 50px
+        position: relative
+        margin-bottom: 10%
+        &::before
+            content: ""
+            position: absolute
+            top: 4px
+            left: 0
+            width: 16px
+            height: 16px
+            background-color: #d65988
+            border-radius: 50%
+    .treaty-paper
+        display: flex
+        justify-content: space-between
+        position: relative
+        margin-bottom: 10%
+        .treaty-paper__left
+            padding-top: 60px
+            width: 60%
+            padding-left: 50px
+        .treaty-paper__title
+            position: relative
+            color: #d65988
+            border-bottom: 1px solid #d65988
+            margin-bottom: 20px
+            font-weight: 400
+            font-size: 24px
+            z-index: 2
+            &::before
+                position: absolute
+                content: ""
+                top: 20px
+                right: 0
+                width: 16px
+                height: 16px
+                background-color: #d65988
+                border-radius: 50%
+        .treaty-paper__text
+            padding-right: 70px
+        .treaty-paper__right
+            position: absolute
+            top: -11%
+            right: -20px
+    .treaty-bottom
+        padding-left: 50px
+        p 
+            font-size: 14px
+            margin-top: 10px
+
+@media screen and (max-width: 1100px)
+    .treaty 
+        .treaty-paper 
+            .treaty-paper__right
+                max-width: 40%
+                top: 7%
+                right: 55px
+                img
+                    width: 100%
+
+@media screen and (max-width: 800px)
+     .treaty 
+        .treaty-paper 
+            .treaty-paper__right
+                top: 20px
+                max-width: 200px
+                right: 0
+            .treaty-paper__left
+                width: 100%
+                padding-left: 0
+            .treaty-paper__text
+                padding-right: 0
+                margin-top: 60px
+            .treaty-paper__title
+                margin-right: 150px
+        .treaty-bottom
+            padding-left: 0

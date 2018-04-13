@@ -1,7 +1,7 @@
 <template>
   <section class="profit section">
       <div class="container">
-          <h2 class="section-title"><span>Рассчитайте прибыль</span> <img src="../assets/images/profit/title.png" alt="Рассчет прибыли в Софатекс"></h2>
+          <h2 class="section-title"><span>Рассчитайте прибыль</span> <img src="../assets/images/title.png" alt="Рассчет прибыли в Софатекс"></h2>
           <div class="profit-wrap">
               <div class="profit-top">
                   <div class="profit-row profit-row--first">
@@ -15,10 +15,10 @@
                       </div>
                   </div>
                   <div class="profit-row profit-row--second">
-                    <p>В вашем магазине сделают покупку не менее 1,2% семей</p>
-                    <div>
-                        <p><strong>1,2%</strong><span>семей</span></p>
-                        <p><strong>125</strong><span>чеков</span></p>
+                    <p class="col">В вашем магазине сделают покупку не менее 1,2% семей</p>
+                    <div class="col">
+                        <p><strong>1,2%</strong><span> семей</span></p>
+                        <p><strong>125</strong><span> чеков</span></p>
                     </div>
                   </div>
               </div>
@@ -40,14 +40,18 @@
                   <div class="profit-row profit-row--fourth">
                       <div class="col">
                           <p>Следующие</p>
-                          <strong>1,2%</strong>
+                          <strong class="number">1,2%</strong>
                           <br>
-                          <p>Станут Вашими покупателями</p>
+                          <p>Станут Вашими покупателями на следующий год</p>
+                      </div>
+                      <div class="col">
+                          <p>А цикл повторений покупки в среднем состоявляет</p>
+                          <p><span class="number">1-2</span> года</p>
                       </div>
                   </div>
               </div>
           </div>
-          <div class="profit-bottom">
+          <div class="profit-btn">
               <button class="btn">Подробнее</button>
               <button class="btn-link">Задать вопрос</button>
           </div>

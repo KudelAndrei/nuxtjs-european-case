@@ -1,0 +1,40 @@
+.footer
+    background-repeat: no-repeat
+    background-size: cover
+    position: relative
+    z-index: 1
+    color: #fff
+    &::before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background-color: #d65988
+        opacity: 0.9
+        z-index: -1
+    .logo
+        display: flex
+        align-items: center
+        h1
+            font-size: 14px
+            margin-left: 20px
+    .footer-wrap
+        display: flex
+        justify-content: space-between
+    .footer-right
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: flex-end
+        a
+            color: #fff
+
+@media screen and (max-width: 450px)
+    .footer 
+        .footer-wrap
+            flex-direction: column
+            .footer-right
+                align-items: flex-start
+                margin-top: 20px

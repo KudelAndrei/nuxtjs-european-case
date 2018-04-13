@@ -1,7 +1,7 @@
 <template>
   <section class="store section">
       <div class="container">
-          <h2 class="section-title"><span>О магазине</span><img src="../assets/images/store/title.png" alt="О магазине Софатекс"></h2>
+          <h2 class="section-title"><span>О магазине</span><img src="../assets/images/title.png" alt="О магазине Софатекс"></h2>
           <p class="store-desc">Предлагаем готовый магазин с маркетинговой и рекламной стратегии</p>
           <ul class="store-wrap">
             <li>

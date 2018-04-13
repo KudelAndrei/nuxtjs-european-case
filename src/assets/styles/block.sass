@@ -1,0 +1,26 @@
+.block
+    min-height: 340px
+    padding: 15px 0
+    display: flex
+    align-items: center
+    justify-content: center
+    .block-inner
+        display: flex
+        padding: 40px
+        border: 10px solid rgba(#d65988, .5)
+    .block-icon
+        display: flex
+        align-items: center
+        width: 50px
+        flex: 1 0 50px
+        margin-right: 25px
+        img 
+            width: 100%
+
+@media screen and (max-width: 600px)
+    .block 
+        .block-inner
+            flex-direction: column
+            padding: 15px
+        .block-icon
+            margin-bottom: 10px

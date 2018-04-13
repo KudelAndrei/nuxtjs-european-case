@@ -1,7 +1,7 @@
 <template>
   <section class="director section">
       <div class="container">
-          <h2 class="section-title"><span>Слово управляющему партнеру</span> <img src="../assets/images/director/title.png" alt="Директор Софатекc"></h2>
+          <h2 class="section-title"><span>Слово управляющему партнеру</span> <img src="../assets/images/title.png" alt="Директор Софатекc"></h2>
           <div class="director-wrap">
             <div class="director-img">
                 <img src="../assets/images/director/director.png" alt="Директор Софатекс">

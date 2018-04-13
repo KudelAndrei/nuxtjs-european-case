@@ -95,11 +95,55 @@ ul,li
     &:hover 
         text-decoration: none
 
+.vue-tabs
+    display: flex
+    .nav-tabs-navigation, .tab-content
+        flex: 1 1 50%
+    .nav-tabs-navigation
+        padding-right: 50px
+    .tablist
+        display: flex
+        flex-direction: column
+    .tab
+        margin-bottom: 20px
+        display: flex
+    .tabs__link
+        box-shadow: 0px 1px 0px 0 #d65988
+        margin-right: 50px
+        position: relative
+        transition: 0.2s ease-in-out
+        &::before
+            position: absolute
+            content: ""
+            top: 12px
+            right: -40px
+            width: 16px
+            height: 16px
+            background-color: #d65988
+            border-radius: 50%
+            transition: 0.2s ease-in-out
+            transform: scale(0)
+            opacity: 0
+        &.active_tab 
+            flex: 1 1 100%
+            width: 100%
+            color: #d65988
+            &::before
+                transform: scale(1)
+                opacity: 1
+        &:hover
+            box-shadow: none
+    .tab-container
+        p, ul 
+            margin-bottom: 15px
+
 @media screen and (max-width: 600px)
     .section
         .section-title
             font-size: 40px
             margin-left: 0
+        .container
+            padding-bottom: 40px
 
 @import './header'
 @import './store'
@@ -107,3 +151,9 @@ ul,li
 @import './director'
 @import './speak'
 @import './profit'
+@import './why'
+@import './brend'
+@import './treaty'
+@import './block'
+@import './question'
+@import './footer'
