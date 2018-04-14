@@ -11,7 +11,7 @@
           <span class="logo-text"><span>одежда</span> для мебели</span>
         </h1>
         <div class="header-top__tight">
-          <button class="btn">Заказать звонок</button>
+          <button class="btn" @click='$modal.show("models")'>Заказать звонок</button>
         </div>
       </div>
       <div class="header-center">
@@ -51,6 +51,16 @@
       </div>
       <div class="section-page">/01</div>
     </div>
+    <Popup />
   </header>
 </template>
 
+
+<script>
+  import Popup from './Popup'
+  export default {
+    components: {
+      Popup
+    }
+  }
+</script>

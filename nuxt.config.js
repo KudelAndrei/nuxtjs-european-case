@@ -7,6 +7,7 @@ module.exports = {
           { hid: 'description', name: 'description', content: 'Мета описание' }
         ]
     },
+    plugins: ['~plugins/vue-js-modal'],
     build: {
         babel: {
             plugins: ['transform-vue-jsx']

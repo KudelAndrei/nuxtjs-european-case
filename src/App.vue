@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Popup />
+    <!-- <Popup /> -->
     <modals-container />
     <Header />
     <Store />
