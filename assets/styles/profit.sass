@@ -49,7 +49,7 @@
                             left: calc(100% + 10px)
                             width: 30px
                             height: 20px
-                            background-image: url(./assets/images/arrow.png)
+                            background-image: url(/assets/images/arrow.png)
                             background-repeat: no-repeat
             &.profit-row--third
                 display: flex
@@ -68,7 +68,7 @@
                             left: 75%
                             width: 30px
                             height: 20px
-                            background-image: url(./assets/images/arrow.png)
+                            background-image: url(/assets/images/arrow.png)
                             background-repeat: no-repeat
                     strong
                         font-weight: 500
@@ -77,6 +77,8 @@
                             display: none
                         .number
                             color: #d65988
+                    &:nth-child(2)
+                        flex: 1 1 40%
             &.profit-row--fourth
                 display: flex
             p 
@@ -109,6 +111,18 @@
             font-size: 14px
             &:hover
                 text-decoration: none
+    .vue-slider-component 
+        cursor: pointer
+        .vue-slider
+            background-color: rgba(#d65988, .7)
+            .vue-slider-process
+                background-color: #d65988
+            .vue-slider-dot
+                background-color: #d65988
+                border: 3px solid #fff
+                width: 20px!important
+                height: 20px!important
+                top: -7px!important
 
 @media screen and (max-width: 1000px)
     .profit 
@@ -118,6 +132,9 @@
                 .profit-row
                     flex: 1 1 100%
                     width: 100%
+                    &.profit-row--first
+                        .col
+                            flex: 1 1 50%
                         
 @media screen and (max-width: 600px)
     .profit 
@@ -140,6 +157,7 @@
                         flex-direction: column
                         .col
                             margin-bottom: 10px
+                            
 
 
 @media screen and (max-width: 500px)

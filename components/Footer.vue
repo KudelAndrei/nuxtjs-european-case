@@ -7,7 +7,7 @@
                   <h1>одежда <br> для мебели </h1>
                 </div>
               <div class="footer-right">
-                  <a href="tel: +375 29 635 67 35">+375 29 635 67 35</a>
+                  <!-- <a href="tel: +375 29 635 67 35">+375 29 635 67 35</a> -->
                   <a href="mailto: fr@sofatex.by">fr@sofatex.by</a>
               </div>
           </div>

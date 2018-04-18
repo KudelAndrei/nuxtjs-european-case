@@ -1,8 +1,8 @@
 .v--modal
-    position: relative
     padding: 70px
     display: flex
     flex-direction: column
+    z-index: 10
     .popup-close
         position: absolute
         top: 50px
@@ -67,3 +67,26 @@
         text-decoration: underline
         &:hover
             text-decoration: none
+
+@media screen and (max-width: 700px)
+    .v--modal-overlay
+        display: flex
+    .v--modal
+        max-width: calc(100vw - 30px)
+        margin: auto!important
+        padding: 30px 20px
+        .popup-title
+            font-size: 24px
+        .popup-close
+            top: 15px
+            right: 15px
+        .popup-label 
+            input
+                font-size: 18px
+    
+@media screen and (max-width: 500px)
+    .v--modal 
+        .popup-btn
+            width: 100%
+        .popup-text
+            font-size: 14px

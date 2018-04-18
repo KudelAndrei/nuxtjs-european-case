@@ -1,5 +1,5 @@
 <template>
-  <modal name="models" height="auto" :scrollable="true">
+  <modal name="models" height="auto" :scrollable="true" @before-open="beforeOpen">
     <button class="popup-close" @click="$modal.hide('models')"><img src="../assets/images/close.png" alt="Софатекс обратная свзяь"></button>
     <div v-if="formSend" class="popup-wrap">
       <h2 class="popup-title">Заполните форму <br> и скачате презентацию</h2>
@@ -10,7 +10,7 @@
         </label>
         <label class="popup-label" v-bind:class="{valid: this.validTel}">
           <span>Ваш телефон</span>
-          <masked-input @input="validInput" ref="tel" type="tel" v-model="tel" mask="\+\375 (11) 111-11-11" placeholder="НАПРИМЕР: +375 (29) 555 55 55" />
+           <input @input="validInput" ref="tel" type="tel" v-model="tel" v-mask="'+375 (##) ###-##-##'" placeholder="НАПРИМЕР: +375 (29) 555 55 55" />
         </label>
         <label class="popup-label" v-bind:class="{valid: this.validMail}">
           <span>Ваш e-mail</span>
@@ -32,11 +32,11 @@
 
 <script>
 import axios from 'axios'
-import MaskedInput from 'vue-masked-input'
 export default {
   name: "models",
   data() {
     return {
+      title: '',
       name: '',
       validName: false,
       tel: '',
@@ -48,22 +48,17 @@ export default {
     }
   },
   methods: {
-    openModal () {
-      this.$modal.show('models',{
-        width: 300,
-        height: 300,
-        classes: 'popup'
-      })
-    },
-     beforeOpen (event) {
-      console.log('event')
+    beforeOpen (event) {
+      setTimeout(() => {
+        this.$refs.name.focus()
+      }, 150);
+      this.title = event.params.title;
     },
     validInput(event){
-      let type = event.target ? event.target.type : event;
-      switch(type){
+      switch(event.target.type){
         case 'text':
-          event.target.value.length >= 3 ? this.validName = true : this.validName = false;
-          break;
+          event.target.value.length >= 2 ? this.validName = true : this.validName = false;
+          break
         case 'email':
           var val = /\S+@\S+\.\S+/
           if (event.target.value.length >= 3 && val.test(event.target.value)){
@@ -71,16 +66,16 @@ export default {
           } else {
             this.validMail = false
           }
-          break;
+          break
         default: 
           var val = /^\+375\s\(((29)|(44)|(25)|(33))\)\s[1-9]{1}[0-9\-]{8}/
-          val.test(event) ? this.validTel = true : this.validTel = false
+          val.test(event.target.value) ? this.validTel = true : this.validTel = false
+          break
       }
     },
     submitForm(event){
       event.preventDefault();
-      let message = `Заявка с сайта ${window.location.hostname}%0A <b>Форма</b>: Заказать звонок%0A <b>Имя</b>: ${this.name}%0A <b>Телефон</b>: ${this.tel}%0A <b>Mail</b>: ${this.mail}`
-
+      let message = `Заявка с сайта ${window.location.hostname}%0A <b>Форма</b>: ${this.title}%0A <b>Имя</b>: ${this.name}%0A <b>Телефон</b>: ${this.tel}%0A <b>Mail</b>: ${this.mail}`
       if (this.validName){
         if (this.validTel){
           if (this.validMail){
@@ -89,7 +84,6 @@ export default {
             axios.get(`https://api.telegram.org/bot465765796:AAHA5-w2EGDhAtllvFcn6ng6izCYsJg9aqA/sendMessage?chat_id=-303313856&text=${message}&parse_mode=HTML`)
               .then(res => {
                 if (res.status == 200){
-                  console.log('Заявка успешно отправлена')
                   this.name = ''
                   this.validName = false
                   this.tel = ''
@@ -110,9 +104,6 @@ export default {
         } else { document.querySelector('input[type="tel"]').focus() }
       } else { this.$refs.name.focus() }
     }
-  },
-  components: {
-    MaskedInput
   }
 }
 </script>

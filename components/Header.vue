@@ -3,15 +3,15 @@
     <div class="container">
       <div class="header-line">
         <a href="mailto: fr@sofatex.by">fr@sofatex.by</a>
-        <a href="tel: +375 29 635 67 35">+375 29 635 67 35</a>
+        <!-- <a href="tel: +375 29 635 67 35">+375 29 635 67 35</a> -->
       </div>
       <div class="header-top">
         <h1 class="logo">
           <div class="logo-img"><img src='../assets/images/logo.svg' /></div>
           <span class="logo-text"><span>одежда</span> для мебели</span>
         </h1>
-        <div class="header-top__tight">
-          <button class="btn" @click='$modal.show("models")'>Заказать звонок</button>
+        <div class="header-top__right">
+          <button class="btn" @click='$modal.show("models", { title: "Заказать звонок (Шапка)" })'>Заказать звонок</button>
         </div>
       </div>
       <div class="header-center">
@@ -47,20 +47,10 @@
         </li>
       </ul>
       <div class="header-bottom">
-        <button class="btn">Подробнее</button>
+        <a href="#store" class="btn">Подробнее</a>
       </div>
       <div class="section-page">/01</div>
     </div>
-    <Popup />
   </header>
 </template>
 
-
-<script>
-  import Popup from './Popup'
-  export default {
-    components: {
-      Popup
-    }
-  }
-</script>

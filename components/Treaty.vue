@@ -13,19 +13,10 @@
             </div>
           </div>
           <div class="treaty-bottom">
-              <button class="btn" @click='$modal.show("models")'>Оставить заявку и скачать договор*</button>
+              <button class="btn" @click='$modal.show("models", { title: "Оставить заявку (Договор)" })'>Оставить заявку и скачать договор*</button>
               <p>*Договор Вы получите на почту после проверки данных</p>
           </div>
           <div class="section-page">/09</div>
       </div>
   </section>
 </template>
-
-<script>
-  import Popup from './Popup'
-  export default {
-    components: {
-      Popup
-    }
-  }
-</script>
