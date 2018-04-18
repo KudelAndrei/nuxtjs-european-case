@@ -17,7 +17,7 @@ module.exports = {
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
-  plugins: ['~plugins/vue-js-modal', '~plugins/vue-mask'],
+  plugins: ['~plugins/vue-js-modal', '~plugins/vue-mask', '~plugins/vue-scrollto'],
   /*
   ** Build configuration
   */

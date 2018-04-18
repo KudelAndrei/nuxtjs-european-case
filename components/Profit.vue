@@ -60,7 +60,7 @@
               </div>
           </div>
           <div class="profit-btn">
-              <a href="#why" class="btn">Подробнее</a>
+              <a href="#" v-scroll-to="'#why'" class="btn">Подробнее</a>
               <button class="btn-link" @click='$modal.show("models", { title: "Задать вопрос (Рассчитайте прибыль)" })'>Задать вопрос</button>
           </div>
           <div class="section-page">/06</div>

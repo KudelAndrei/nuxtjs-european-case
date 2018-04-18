@@ -47,7 +47,7 @@
         </li>
       </ul>
       <div class="header-bottom">
-        <a href="#store" class="btn">Подробнее</a>
+        <a href="#" v-scroll-to="'#store'" class="btn">Подробнее</a>
       </div>
       <div class="section-page">/01</div>
     </div>
