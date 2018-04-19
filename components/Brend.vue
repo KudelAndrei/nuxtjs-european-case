@@ -1,5 +1,5 @@
 <template>
-  <section class="brend section">
+  <section id="brend" class="brend section">
       <div class="container">
           <h2 class="section-title"><span>Поддержка бренда</span><img src="../assets/images/title.png" alt="Поддержка бренда Софатекс"></h2>
           <ul class="brend-wrap">

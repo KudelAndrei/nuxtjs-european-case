@@ -1,5 +1,5 @@
 <template>
-  <header class="header section" :style="{ backgroundImage: 'url(\'' + require('../assets/images/header/bg.png') + '\')' }">
+  <header id="header" class="header section" :style="{ backgroundImage: 'url(\'' + require('../assets/images/header/bg.png') + '\')' }">
     <div class="container">
       <div class="header-line">
         <a href="mailto: fr@sofatex.by">fr@sofatex.by</a>
@@ -53,4 +53,3 @@
     </div>
   </header>
 </template>
-

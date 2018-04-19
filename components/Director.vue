@@ -1,5 +1,5 @@
 <template>
-  <section class="director section">
+  <section id="director" class="director section">
       <div class="container">
           <h2 class="section-title"><span>Слово управляющему партнеру</span> <img src="../assets/images/title.png" alt="Директор Софатекc"></h2>
           <div class="director-wrap">
@@ -7,7 +7,7 @@
                 <img src="../assets/images/director/director.png" alt="Директор Софатекс">
                 <div class="director-quote">
                     <span>«Вы можете быть частью истории или наблюдать за всем этим со стороны»</span>
-                    <a href="#" target="_blank"><span>Ян Ярош</span> <i><img src="../assets/images/director/vk.png" alt="Директор Софатекc"></i></a>
+                    <a href="https://vk.com/yan_95" target="_blank"><span>Ян Ярош</span> <i><img src="../assets/images/director/vk.png" alt="Директор Софатекc"></i></a>
                 </div>
             </div>
             <div class="director-desc">

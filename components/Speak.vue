@@ -1,5 +1,5 @@
 <template>
-  <section class="speak section" :style="{ backgroundImage: 'url(\'' + require('../assets/images/speak/bg.png') + '\')' }">
+  <section id="speack" class="speak section" :style="{ backgroundImage: 'url(\'' + require('../assets/images/speak/bg.png') + '\')' }">
       <div class="container">
         <h2 class="section-title"><span>Поговорим на чистоту</span><img src="../assets/images/title.png" alt="Поговорим на чистоту Софатекс"></h2>
         <div class="speak-desc">

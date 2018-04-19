@@ -1,5 +1,5 @@
 <template>
-  <section class="now section" :style="{ backgroundImage: 'url(\'' + require('../assets/images/now/bg.png') + '\')' }">
+  <section id="now" class="now section" :style="{ backgroundImage: 'url(\'' + require('../assets/images/now/bg.png') + '\')' }">
     <div class="container">
         <h2 class="section-title"><span>Софатекс сейчас</span> <img src="../assets/images/title-white.png" alt="Софатекс сейчас"></h2>
         <ul class="now-wrap">

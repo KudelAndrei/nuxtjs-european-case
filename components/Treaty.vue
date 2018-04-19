@@ -1,5 +1,5 @@
 <template>
-  <section class="treaty section" :style="{ backgroundImage: 'url(\'' + require('../assets/images/treaty/bg.png') + '\')' }">
+  <section id="treaty" class="treaty section" :style="{ backgroundImage: 'url(\'' + require('../assets/images/treaty/bg.png') + '\')' }">
       <div class="container">
           <h2 class="section-title"><span>Мы уверены в Вашем успехе</span><img src="../assets/images/title.png" alt="Мы уверены в Вашем успехе Софатекс"></h2>
           <p class="treaty-desc">И поэтому делим с Вами риски 50-50. В течение 2-х месяцев после запуска вы можете вернуть товар. Единственное условие - сделать все пункты из списка для новых партнеров.</p>

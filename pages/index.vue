@@ -1,6 +1,7 @@
 <template>
-  <section id="app">
-   <Header />
+  <section id="app" v-scroll-spy>
+    <Header />
+    <Navigation />
     <Store />
     <Now />
     <Director />
@@ -19,7 +20,7 @@
 </template>
 
 <script>
-import Popup from '~/components/Popup'
+import Navigation from '~/components/Navigation'
 import Header from '~/components/Header.vue'
 import Store from '~/components/Store.vue'
 import Now from '~/components/Now.vue'
@@ -32,6 +33,7 @@ import Treaty from '~/components/Treaty'
 import Block from '~/components/Block'
 import Question from '~/components/Question'
 import Footer from '~/components/Footer'
+import Popup from '~/components/Popup'
 
 export default {
   name: 'app',
@@ -48,8 +50,9 @@ export default {
     Block,
     Question,
     Footer,
+    Navigation,
     Popup
-  },
+  }
 }
 </script>
 

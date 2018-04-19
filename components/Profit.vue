@@ -1,5 +1,5 @@
 <template>
-  <section class="profit section">
+  <section id="profit" class="profit section">
       <div class="container">
           <h2 class="section-title"><span>Рассчитайте прибыль</span> <img src="../assets/images/title.png" alt="Рассчет прибыли в Софатекс"></h2>
           <div class="profit-wrap">

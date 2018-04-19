@@ -1,5 +1,5 @@
 <template>
-  <section class="question section">
+  <section id="question" class="question section">
       <div class="container">
         <h2 class="section-title"><span>Вопросы и ответы</span><img src="../assets/images/title.png" alt="Вопросы и ответы Софатекс"></h2>
         <p class="quyestion-desc">Нажмите на вопрос, чтобы увидеть ответ</p>
