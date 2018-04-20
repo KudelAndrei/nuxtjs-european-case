@@ -1,6 +1,10 @@
 .why
     background-color: #fff
     padding-top: 230px
+    .container
+        min-height: calc(100vh - 230px)
+        .container-wrap
+            margin-top: 40px
     .why-top
         position: absolute
         top: 0
@@ -15,6 +19,9 @@
         justify-content: center
         text-align: center
         z-index: 1
+        .container
+            min-height: auto
+            flex-direction: column
         a 
             color: #fff
             cursor: pointer
@@ -47,5 +54,11 @@
 
 @media screen and (max-width: 800px)
     .why 
+        .why-top 
+            .container
+                padding-bottom: 20px
         .vue-tabs 
             flex-direction: column
+        .container
+            .container-wrap
+                margin-bottom: 0

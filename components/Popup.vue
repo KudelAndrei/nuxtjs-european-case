@@ -2,26 +2,26 @@
   <modal name="models" height="auto" :scrollable="true" @before-open="beforeOpen" @before-close="beforeClose">
     <button class="popup-close" @click="$modal.hide('models')"><img src="../assets/images/close.png" alt="Софатекс обратная свзяь"></button>
     <div v-if="formSend" class="popup-wrap">
-      <h2 v-if="this.title.includes('Договор')" class="popup-title">Заполните форму</h2>
+      <h2 v-if="this.title.includes('Договор') || this.title.includes('звонок')" class="popup-title">Заполните форму</h2>
       <h2 v-else class="popup-title">Заполните форму <br> и скачате презентацию</h2>
       <form>
         <label class="popup-label" v-bind:class="{valid: this.validName}">
           <span>Ваше имя</span>
-          <input @input="validInput" v-model="name" ref="name" type="text" placeholder="НАПРИМЕР: ИВАНОВ ИВАН" required>
+          <input @input="validInput" v-model="name" ref="name" type="text" placeholder="ИВАНОВ ИВАН" required>
         </label>
         <label class="popup-label" v-bind:class="{valid: this.validTel}">
           <span>Ваш телефон</span>
-           <input @input="validInput" ref="tel" type="tel" v-model="tel" v-mask="'+375 (##) ###-##-##'" placeholder="НАПРИМЕР: +375 (29) 555 55 55" />
+           <input @input="validInput" ref="tel" type="tel" v-model="tel" v-mask="'+375 (##) ###-##-##'" placeholder="+375 (29) 555 55 55" required>
         </label>
         <label class="popup-label" v-bind:class="{valid: this.validMail}">
           <span>Ваш e-mail</span>
-          <input @input="validInput" ref="mail" v-model="mail" type="email" placeholder="НАПРИМЕР: INFO@YANDEX.RU" required>
+          <input @input="validInput" ref="mail" v-model="mail" type="email" placeholder="INFO@YANDEX.RU" required>
         </label>
         <p class="popup-text">Я даю свое <a href="#">согласие на обработку персональных данных</a></p>
         <button class="popup-btn btn" type="submit" @click="submitForm">
           <span v-if="load" class="loader"></span>
           <span v-else>
-            <span v-if="this.title.includes('Договор')">Отправить заявку</span>
+            <span v-if="this.title.includes('Договор') || this.title.includes('звонок')">Отправить заявку</span>
             <span v-else>Скачать презентацию</span>
           </span>
         </button>
@@ -29,13 +29,14 @@
     </div>
     <div v-else class="popup-send">
       <h2 class="popup-title">Спасибо! <br> Ваша заявка успешно отправлена!</h2>
-      <p v-if="this.title.includes('Договор')">Договор Вы получите на почту после проверки данных</p>
+      <p v-if="this.title.includes('звонок')">Мы перезвоним Вам в ближайшее время!</p>
+      <p v-else-if="this.title.includes('Договор')">Договор Вы получите на почту после проверки данных</p>
       <p v-else>
         <a href="/presentaciya.pdf" target="_blank">Посмотреть презентацию в браузере</a>
         <br>
         <span>или</span>
         <br>
-        <a href="/presentaciya.pdf" download>Скачать презентацию</a>
+        <a href="/presentaciya.pdf" download="Sofatex">Скачать презентацию</a>
       </p>
     </div>
   </modal>
@@ -95,7 +96,7 @@ export default {
         if (this.validTel){
           if (this.validMail){
             this.load = true
-            axios.get(`https://api.telegram.org/bot465765796:AAHA5-w2EGDhAtllvFcn6ng6izCYsJg9aqA/sendMessage?chat_id=-303313856&text=${message}&parse_mode=HTML`)
+            axios.get(`https://api.telegram.org/bot465765796:AAHA5-w2EGDhAtllvFcn6ng6izCYsJg9aqA/sendMessage?chat_id=-301502390&text=${message}&parse_mode=HTML`)
               .then(res => {
                 if (res.status == 200){
                   this.name = ''
@@ -106,8 +107,7 @@ export default {
                   this.validMail = false
                   this.load = false
                   this.formSend = false
-                  // this.title.includes('Договор') ? null : document.location.href='/presentaciya.pdf'
-                  if (this.title.includes('Договор')){
+                  if (this.title.includes('Договор') || this.title.includes('звонок')){
                     setTimeout(() => {
                       this.formSend = true
                       this.$modal.hide('models')

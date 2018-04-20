@@ -33,7 +33,7 @@ ul,li
 .container
     max-width: 1230px
     width: 100%
-    padding: 40px 15px 50px
+    padding: 20px 15px 80px
     margin: 0 auto
 
 .section
@@ -43,10 +43,15 @@ ul,li
     display: flex
     .container
         position: relative
-        margin: auto
+        margin: 0 auto
+        min-height: 100vh
+        display: flex
+        .container-wrap
+            margin: auto
+            width: 100%
     .section-page
         position: absolute
-        bottom: 0px
+        bottom: 20px
         right: 20px
         font-size: 48px
         color: #b2b2b0
@@ -95,6 +100,11 @@ ul,li
     line-height: 1.2
     padding: 6px 0 0 0
     font-family: Myriad Pro Regular, sans-serif
+    margin-top: auto
+    cursor: pointer
+    font-size: 24px
+    &:hover
+        text-decoration: none
     
 
 .vue-tabs
@@ -117,8 +127,8 @@ ul,li
         &::before
             position: absolute
             content: ""
-            top: 12px
-            right: -40px
+            top: 14px
+            right: -10px
             width: 16px
             height: 16px
             background-color: #d65988
@@ -134,7 +144,7 @@ ul,li
                 transform: scale(1)
                 opacity: 1
         &:hover
-            box-shadow: none
+           color: #d65988
     .tab-container
         p, ul 
             margin-bottom: 15px
@@ -160,6 +170,11 @@ ul,li
             margin-left: 0
         .container
             padding-bottom: 40px
+        .link
+            font-size: 20px
+        .vue-tabs 
+            .tabs__link
+                margin-right: 0
 
 @import './header'
 @import './store'

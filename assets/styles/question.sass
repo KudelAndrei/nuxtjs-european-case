@@ -1,12 +1,20 @@
 .question
+    padding-top: 300px
+    .block
+        position: absolute
+        top: 0
+        width: 100%
+        height: auto
+    >.container
+        min-height: calc(100vh - 300px)
     .section-title
-        margin-bottom: 10%
+        margin-bottom: 30px
     .quyestion-desc
-        margin-bottom: 10%
+        margin-bottom: 30px
         color: #d65988
         margin-left: 50px
     .vue-tabs 
-        margin-bottom: 10%
+        margin-bottom: 30px
         margin-left: 50px
         .tab
             margin-bottom: 35px
@@ -44,3 +52,13 @@
                 text-align: center
                 left: 0
                 margin-left: 0
+    
+@media screen and (max-width: 500px)
+    .question
+        flex-direction: column
+        padding-top: 0
+        .block
+            position: relative
+            padding-bottom: 0
+            .container
+                padding-bottom: 10px

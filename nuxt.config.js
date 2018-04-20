@@ -3,11 +3,12 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'Софатекс одежда для мебели',
+    title: 'Софатекс Франшиза',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Крупнейший магазин чехлов для мебели из Европы. Высокое качество и огромный выбор натяжных универсальных чехлов для диванов и кресел в Минске и по всей Беларуси.' }
+      { hid: 'description', name: 'description', content: 'Крупнейший магазин чехлов для мебели из Европы. Высокое качество и огромный выбор натяжных универсальных чехлов для диванов и кресел в Минске и по всей Беларуси.' },
+      { hid: 'keywords', name: 'keywords', content: 'Франшиза Софатекс, Франшиза Беларусь, Чехлы, чехлы на мебель, чехлы на диваны, чехлы на кресла, чехлы на комплекты, чехлы на стулья.' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -16,7 +17,7 @@ module.exports = {
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
+  loading: { color: '#d65988' },
   plugins: ['~plugins/vue-js-modal', '~plugins/vue-mask', '~plugins/vue-scrollto', '~plugins/vue-scroll'],
   /*
   ** Build configuration

@@ -33,14 +33,24 @@
             height: 40px
             font-size: 22px
             transition: 0.2s ease-in-out
+            &::-webkit-input-placeholder
+                color: #bdbdbd
+            &::-moz-placeholder
+                color: #bdbdbd
+            &:-moz-placeholder
+                color: #bdbdbd
+            &:-ms-input-placeholder
+                color: #bdbdbd
             &:focus
                 border-bottom: 4px solid #d65988
-            // &:focus
-            //     ::-webkit-input-placeholder,
-            //     ::-moz-placeholder, 
-            //     :-moz-placeholder, 
-            //     :-ms-input-placeholder 
-            //         color: transparent
+                &::-webkit-input-placeholder
+                    color: #f4f4f4
+                &::-moz-placeholder
+                    color: #f4f4f4
+                &:-moz-placeholder
+                    color: #f4f4f4
+                &:-ms-input-placeholder
+                    color: #f4f4f4
         &.valid
             input
                 border-bottom: 4px solid #0bbf0b
@@ -50,8 +60,7 @@
         a 
             color: #d65988
             text-decoration: underline
-            &:hover
-                text-decoration: none
+            cursor: default
     .popup-btn
         width: calc(100% - 40px)
         margin: 20px auto 0

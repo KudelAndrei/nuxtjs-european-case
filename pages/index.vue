@@ -1,5 +1,5 @@
 <template>
-  <section id="app" v-scroll-spy>
+  <section id="app" v-scroll-spy="{offset: -150}">
     <Header />
     <Navigation />
     <Store />
@@ -10,7 +10,6 @@
     <Why />
     <Brend />
     <Treaty />
-    <Block />
     <Question />
     <Footer />
     <no-ssr>
@@ -30,7 +29,6 @@ import Profit from '~/components/Profit'
 import Why from '~/components/Why'
 import Brend from '~/components/Brend'
 import Treaty from '~/components/Treaty'
-import Block from '~/components/Block'
 import Question from '~/components/Question'
 import Footer from '~/components/Footer'
 import Popup from '~/components/Popup'
@@ -47,7 +45,6 @@ export default {
     Why,
     Brend,
     Treaty,
-    Block,
     Question,
     Footer,
     Navigation,

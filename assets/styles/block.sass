@@ -4,6 +4,8 @@
     display: flex
     align-items: center
     justify-content: center
+    .container
+        min-height: auto
     .block-inner
         display: flex
         padding: 40px
@@ -19,6 +21,8 @@
 
 @media screen and (max-width: 600px)
     .block 
+        .container
+            padding-bottom: 20px
         .block-inner
             flex-direction: column
             padding: 15px

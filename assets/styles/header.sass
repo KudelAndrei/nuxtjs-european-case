@@ -117,8 +117,11 @@
         flex: 1 1 100%
         width: 100%
         margin-bottom: 15px
-    .header .header-center__bottom .wrap
-        flex-direction: column
+    .header 
+        .header-center__bottom
+            flex-direction: column-reverse
+            .wrap
+                flex-direction: column
 
 @media screen and (max-width: 700px)
     .header 
@@ -144,6 +147,7 @@
         .logo
             line-height: 0.7
             margin-top: 15px
+            margin-right: 0
         .header-bottom
             margin-bottom: 20px
             
@@ -152,6 +156,7 @@
     .header 
         .header-line
             justify-content: center
+            margin-right: 0
         .header-center
             padding: 15px
         .header-title

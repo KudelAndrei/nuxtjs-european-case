@@ -1,6 +1,6 @@
 <template>
   <nav class="navigation" v-scroll-spy-active v-scroll-spy-link>
-      <a href="#" v-scroll-to="'#header'" class="navigation-link active"><strong>01. </strong><span>Начало</span></a>
+      <a href="#" v-scroll-to="'#header'" class="navigation-link"><strong>01. </strong><span>Начало</span></a>
       <a href="#" v-scroll-to="'#store'" class="navigation-link"><strong>02. </strong><span>О магазине</span></a>
       <a href="#" v-scroll-to="'#now'" class="navigation-link"><strong>03. </strong><span>Софатекс сейчас</span></a>
       <a href="#" v-scroll-to="'#director'" class="navigation-link"><strong>04. </strong><span>Слово управляющего</span></a>
